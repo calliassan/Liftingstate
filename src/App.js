@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { A } from "./A";
+import { B } from "./B";
+import { useState } from "react";
+import { C } from "./C";
+import { Users } from "./user";
 
 function App() {
+  // const [value, setvalue] = useState(0);
+  // const [text, settext] = useState("");
+  const [datas, setdatas] = useState([]);
+  // const getData = (valueA, textA) => {
+  //   setvalue(valueA);
+  //   settext(textA);
+  // };
+  const getdata1 = (datas1) => {
+    setdatas(datas1);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <A call2={getData} />
+      <B val={value} text={text} /> */}
+      <Users call1={getdata1} />
+      <C datas={datas} />
     </div>
   );
 }
